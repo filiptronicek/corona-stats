@@ -53,9 +53,9 @@ def main():
                 WriteRate.close()    
 
                 if(preditction < 2):
-                    print('\n\nNumbers are running at ${} / second. That would mean we will be done in {} hours! Now the rate is: ${} / second \n+{} in {} seconds'.format(rate_total, round(preditction * 24), rate, diff, round(loops*DELAY, 2)))
+                    print('\n\nNumbers are running at ${} / second. That would mean we will be done in {} hours! Now the rate is: {} / second \n+{} in {} seconds'.format(rate_total, round(preditction * 24), rate, diff, round(loops*DELAY, 2)))
                 else:
-                    print('\n\nNumbers are running at ${} / second. That would mean we will be done in {} days! Now the rate is: ${} / second \n+{} in {} seconds'.format(rate_total, round(preditction), rate, diff, round(loops*DELAY, 1)))
+                    print('\n\nNumbers are running at ${} / second. That would mean we will be done in {} days! Now the rate is: {} / second \n+{} in {} seconds'.format(rate_total, round(preditction), rate, diff, round(loops*DELAY, 1)))
 
                 #print(myData)
                 loops = 0
