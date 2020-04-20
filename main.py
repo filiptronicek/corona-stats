@@ -10,7 +10,7 @@ date = datetime.now()
 
 
 def get_sick():
-    r = requests.get('https://corona.lmao.ninja/all')
+    r = requests.get('https://corona.lmao.ninja/v2/all')
     return r.json()['cases']
 
 
