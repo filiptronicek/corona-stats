@@ -1,9 +1,14 @@
 from time import sleep
 import os
 
-os.system("git add .")
+def commit():
+    delay = 1800
 
-os.system('git commit -m "Data"')
-os.system("git push")
+    os.system("git add .")
 
-sleep(600)
+    os.system('git commit -m "Data"')
+    os.system("git push")
+
+    sleep(delay)
+    commit()
+commit()
