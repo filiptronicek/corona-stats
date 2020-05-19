@@ -2,7 +2,7 @@ from time import sleep
 import os
 
 def commit():
-    delay = 1800
+    delay = 1200
 
     os.system("git add .")
 
