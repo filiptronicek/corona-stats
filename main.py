@@ -7,7 +7,10 @@ import os
 
 from release import newRls
 
+DAY = 86400
 DELAY = 600
+
+ratio = DAY / DELAY
 
 date = datetime.now()
 
@@ -17,13 +20,16 @@ def get_sick():
 
 def main():    
         last_sick = get_sick()
-        #print(last_trees)
         totalLoops = 0
         loops = 0
         gained_total = 0
         while True:
             now = datetime.now()
             time.sleep(DELAY)
+            if totalLoops % int(ratio) == 0:
+                version = newRls()
+                os.system('git tag -a v'+version+' -m "Data version '+version+'"')
+                os.system('git push --tags')
             sick_now = get_sick()
             #print(trees_now)
             loops += 1
